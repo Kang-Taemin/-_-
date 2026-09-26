@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<title>2D Sierpinski Carpet</title>
+<input type="color" id="colorPicker" value="#ff0000" />
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+void
+
+main()
+{
+    gl_Position = vPosition;
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+uniform vec4 uColor;
+void
+
+main()
+{
+    gl_FragColor = uColor;
+}
+</script>
+
+<script type="text/javascript" src="../angelCommon/webgl-utils.js"></script>
+<script type="text/javascript" src="../angelCommon/initShaders.js"></script>
+<script type="text/javascript" src="../angelCommon/MV.js"></script>
+<script type="text/javascript" src="homework1.js"></script>
+</head>   
+
+<body>
+<div>
+recursive steps  0 <input id="slider" type="range"
+ min="0" max="5" step="1" value="0" />
+ 5
+</div>
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+</body>
+</html>
